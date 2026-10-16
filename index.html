@@ -262,8 +262,7 @@ const DEFAULTS = {
   broker:"sim", alpKey:"", alpSecret:"", tf:"1Min", range:null, sessionLines:true, scale:2, wsort:null, layout:1, syncZoom:true, panes:[], active:0, sizeMode:"shares", oQty:10, oAmt:500, allowShort:false, showAtr:true, showSpark:true, chgBase:"close", ctype:"candles",
   ind:{ma:[{t:"sma",p:9,on:false,c:"#f5b83d"},{t:"sma",p:20,on:false,c:"#4f8cff"},{t:"sma",p:50,on:false,c:"#a78bfa"},{t:"sma",p:200,on:false,c:"#e6eaf2"}],
        bb:{on:false,p:20,k:2,t:"sma",fill:true,c:"#38bdf8"}},
-  watch:["AAPL","MSFT","NVDA","TSLA","AMD","SPY"]
-  [  "NVDA",  "SOXL",  "MU",  "QQQ",  "^VIX",  "CL=F",  "NQ=F",  "AAVE-USD",  "SNDK",  "STX",  "WDC",  "NBIS",  "GEV",  "WMT",  "BTSG",  "APH",  "NAUT",  "DELL",  "AAPL",  "CRAK",  "TQQQ",  "TSLA"]
+  watch:["NVDA",  "SOXL",  "MU",  "QQQ",  "^VIX",  "CL=F",  "NQ=F",  "AAVE-USD",  "SNDK",  "STX",  "WDC",  "NBIS",  "GEV",  "WMT",  "BTSG",  "APH",  "NAUT",  "DELL",  "AAPL",  "CRAK",  "TQQQ",  "TSLA"]
 };
 const cfg = Object.assign({}, DEFAULTS, (()=>{ try{return JSON.parse(localStorage.getItem("dt_cfg")||"{}")}catch{return{}} })());
 cfg.panes = (Array.isArray(cfg.panes)?cfg.panes:[]).filter(x=>cfg.watch.includes(x));          // which symbol each chart pane shows
